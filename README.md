@@ -1,2 +1,1 @@
-# Attendence-System
-Attendence System by Facial Recognition
+# face_recognition_project
