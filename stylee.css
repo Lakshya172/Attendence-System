@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('xyzz.png') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover the entire viewport */
+    position: relative; /* Positioning for the overlay */
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative; /* Positioning for the overlay */
+    z-index: 1; /* Ensure the container is above the background */
+    margin: auto; /* Center the container */
+    margin-top:150px ;
+    max-width: 600px; /* Set a maximum width for the container */
+}
+
+.university-name {
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Size of the university name */
+    color: #ff7e00; /* Dark orange for the university name */
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #ff7e00; /* Dark orange for the heading */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increased gap between buttons */
+}
+
+.btn {
+    background-color: #ff8c00; /* Darker orange */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 40px; /* Increased padding for larger buttons */
+    font-size: 20px; /* Increased font size for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #ff6f00; /* Lighter orange */
+    transform: translateY(-2px);
+}
+
+.btn:focus {
+    outline: none;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up & Sign In</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9ce7d;
+            background-image: linear-gradient(rgba(239, 138, 36, 0.1), rgba(218, 149, 79, 0.7)), url('xyz.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .form-container {
+            background-image: linear-gradient(rgba(207, 154, 86, 0.6), rgba(207, 154, 86, 0.6));
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px #d5aeae80;
+            width: 350px;
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            border: 2px solid #ccc;
+            width: 100%;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            font-size: large;
+            border: none;
+            background-color: rgb(95, 51, 51);
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: rgb(60, 129, 114);
+        }
+        .toggle-link {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 id="formTitle">Sign Up</h2>
+        <form id="authForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <span class="toggle-link" onclick="toggleForm()">Already have an account? Sign In</span>
+    </div>
+
+    <script>
+        let isSignUp = true;
+
+        function toggleForm() {
+            isSignUp = !isSignUp;
+            const nameField = document.getElementById("name");
+            const formTitle = document.getElementById("formTitle");
+            const submitButton = document.querySelector("button");
+            const toggleText = document.querySelector(".toggle-link");
+
+            if (isSignUp) {
+                formTitle.textContent = "Sign Up";
+                submitButton.textContent = "Sign Up";
+                toggleText.textContent = "Already have an account? Sign In";
+                nameField.style.display = "block";
+                nameField.setAttribute("required", "true"); // Make name field required
+            } else {
+                formTitle.textContent = "Sign In";
+                submitButton.textContent = "Sign In";
+                toggleText.textContent = "Don’t have an account? Sign Up";
+                nameField.style.display = "none";
+                nameField.removeAttribute("required"); // Remove required to allow submission
+            }
+        }
+
+        document.getElementById("authForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            if (isSignUp) {
+                alert("Sign Up Successful!");
+            } else {
+                alert("Sign In Successful!");
+            }
+
+            // Redirect to main.html
+            window.location.href = "main.html";
+        });
+    </script>
+</body>
+</html>
