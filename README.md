@@ -2,7 +2,7 @@
 
 A Python-based **automated attendance management system** that uses computer vision and machine learning to identify students through facial recognition and record their attendance with timestamps.
 
-The system captures facial samples through a webcam, trains a **K-Nearest Neighbors (KNN)** classifier, recognizes registered students in real time, and stores daily attendance records in CSV files.
+The system captures facial samples through a webcam, trains a **K-Nearest Neighbors (KNN)** classifier, recognizes registered students in real time, and stores daily attendance records in CSV files
 
 ---
 
